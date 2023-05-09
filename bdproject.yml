@@ -1,0 +1,39 @@
+# THIS IS A TEMPLATE
+
+# The type of project (string)
+# Valid values: theme, plugin (in dev)
+type: theme
+
+# The name of the main (input) file of the project, without its extension (string)
+# By default: the name of project type (theme or plugin)
+mainFilename: "main"
+
+# The settings of output file
+output:
+  # The folder for project "compiling" (string)
+  # The output file will be located in the same folder
+  # By default: "/" (this folder)
+  folder: "out"
+
+  # The name of the output file (string)
+  # May contain the following placeholders:
+  #     $name      - The name of theme (or plugin) from project metadata
+  #     $version   - The version of theme (or plugin) from project metadata
+  #     $author    - The author of theme (or plugin) from project metadata
+  #     $type      - The type of project (theme or plugin)
+  #     $ext       - The file extension of project type (css for themes and js for plugins)
+  #
+  # By default: "$name-$version.$type.$ext"
+  name: "$name-$version.$type.$ext"
+
+# Options (settings) for "compiling" the project
+options:
+  # Whether to automatically move the generated project file into the
+  # BetterDiscord folder (boolean)
+  # By default: false
+  autoMoveToBetterDiscordFolder: true
+
+  # Whether to minify the generated project file (boolean)
+  # Attention! This option is under development and may contain bugs
+  # By default: false
+  doMimize: true
